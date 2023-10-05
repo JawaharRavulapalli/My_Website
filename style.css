@@ -1,0 +1,265 @@
+/*css styling for nav bar*/   
+.navbar {
+    overflow: hidden; 
+    margin-bottom: -10px;     
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: #53bcfe;
+    z-index: 1;
+}
+
+/*css styling to allign menu options to right and configuration*/
+.navbar a {
+    float: right;            
+    display: block;          
+    color: #000000;           
+    text-align: center;       
+    padding: 10px 10px;       
+    text-decoration: none;    
+}
+
+/*css styling to allign title to left*/
+.navbar .title {
+        float: left;               
+}
+
+/*css styling to give color when user hover over menu links*/
+.navbar a:hover {
+        background-color: #f0932b; 
+        color: black;
+}
+
+/*css styling for all images used*/
+img {
+   padding-top: 20px;
+   display: block; 
+   margin-left: auto;  
+   margin-right: auto;
+   width: 95%; 
+   height: 70%; 
+}
+
+/*css styling for about text section*/
+#about_text{
+    text-align: justify;
+    margin-right: 1%;
+}
+
+/*css styling of background color to body section*/
+body {
+    background-color: rgb(220, 245, 242);
+    padding-top: 50px; 
+    font-family: 'Arvo', serif;
+   
+}
+
+/*css grid styling of papers published section*/
+.papers_published {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem;
+    grid-template-areas: 
+    "paper1 paper2 paper3 paper4"
+    "paper5 paper6 paper7 paper8";
+}
+
+/*css grid styling for images collection section*/
+.images_collection{
+    display: grid;
+    grid-template-columns:  repeat(3, auto);
+    grid-gap: 0.5rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img5 img6";
+}
+
+/*styling images for images collection section*/
+.images_collection img{
+    padding:0px;
+    align-self: center;
+    width: 80%;
+    height: 90%;
+    border: #000000 solid;
+    border-radius: 50px;
+    display: block;   
+}
+
+/*styling papers for papers published section*/
+.paper {
+    display: flex;
+    flex-direction: column;
+}
+
+.paper img {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+#papers_section a {
+    text-align: center;
+    display: block;
+    margin-left: 0;
+    max-height: 20%;
+}
+
+/*styling for experiences section*/
+.experiences{
+    width: 49.5%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*styling for hobbies section*/
+.hobbies p{
+    text-align: center;
+    font-style: italic;
+}
+
+/*styling for blogs section*/
+.blogs{
+    width: 49.5%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.blogs p:nth-child(3) {
+    text-align: right;
+}
+
+/*css styling for scrolling effect on navigation*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*styling for logos in contact me section*/
+.logo_container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+/*styling for logo icons*/
+.logo {
+    display: inline-block;
+    max-width: 25px; 
+    margin: 0 10px;
+    margin-top: -25px;
+
+}
+
+/*styling for hyperlink for navigate to more papers published*/
+.see_more{
+    text-align: center;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+
+/*css styling for all paraghraps with left padding*/
+p{
+    padding-left: 10px;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+}
+
+/*css styling for to define the profile image size*/
+.project_img{
+    width: 20%
+}
+
+/*css styling for all headers in website*/
+h3{
+    margin-left: 12px;
+}
+h2, header{
+    text-align: center;
+   
+}
+h1, h2, h3{
+    color: #4ab1f1;
+}
+
+/*css styling for section seperator line*/
+hr{
+    width: 99%;
+    height: 2px;
+    background-color: black; 
+    border: none;            
+    margin-top: 0px;
+}
+
+
+/*styling the website for mobile view*/
+@media screen and (max-width: 500px) {
+
+    /*styling grid view of papaer published section in mobile*/
+    .papers_published {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "paper1"
+        "paper2"
+        "paper3"
+        "paper4"
+        "paper5"
+        "paper6"
+        "paper7"
+        "paper8";
+        }
+    .see_more{
+
+        margin-top:10px;
+    }
+
+   
+    .paper a{
+        text-align: left;
+    }
+    
+    /*styling grid view of papaer published section in mobile*/
+    .images_collection {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6"
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .experiences{
+        text-align: justify;
+        width: 100%;
+        display: block;
+    }
+    .blogs{
+        width: 100%;
+        display: block;
+    
+    }
+    .navbar{
+        visibility: hidden;
+    }
+    .project_img{
+        width: 70%
+    }
+    .logo {
+
+        margin: 0 50px;
+    
+    }
+}
